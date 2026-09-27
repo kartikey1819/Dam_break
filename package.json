@@ -1,0 +1,14 @@
+{
+  "name": "floodsim-hadr",
+  "version": "1.0.0",
+  "description": "Dam break inundation modelling & HADR decision support (SIH26161) — SPH + 2D SWE solvers, open data, GIS dashboard",
+  "private": true,
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "node server/index.js",
+    "start": "node server/index.js",
+    "test": "node test/solvers.test.js && node test/data.test.js && node test/pipeline.test.js"
+  },
+  "dependencies": {}
+}

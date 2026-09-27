@@ -23,14 +23,14 @@
         <button class="btn btn-link" id="landingLang">हिन्दी / English</button>
       </div>
       <div class="cap-grid">
-        <div class="cap"><div class="cap-t">HYDRODYNAMIC SIMULATION</div><div class="cap-d">SPH + Delft3D scenario modelling workflow</div></div>
+        <div class="cap"><div class="cap-t">HYDRODYNAMIC SIMULATION</div><div class="cap-d">SPH particle + 2D SWE (Delft3D-class) solvers</div></div>
         <div class="cap"><div class="cap-t">GIS FLOOD MAPPING</div><div class="cap-d">Inundation, depth and impact visualization</div></div>
         <div class="cap"><div class="cap-t">HADR DECISION SUPPORT</div><div class="cap-d">Risk analysis and exportable disaster maps</div></div>
         <div class="cap cap-alt"><div class="cap-t">VILLAGE-LEVEL INTELLIGENCE</div><div class="cap-d">Local flood impact and arrival-time information</div></div>
         <div class="cap cap-alt"><div class="cap-t">EVACUATION INTELLIGENCE</div><div class="cap-d">Route analysis using simulated flood zones</div></div>
         <div class="cap cap-alt"><div class="cap-t">WHAT-IF SCENARIOS</div><div class="cap-d">Compare different dam-break conditions</div></div>
       </div>
-      <p class="landing-note">Prototype decision-support demonstration. Packaged scenario uses DEMO / SIMULATED data; it is not an operational emergency-warning system.</p>
+      <p class="landing-note">Prototype decision-support demonstration. Numerical SPH + 2D shallow-water solvers on open data (SRTM, OpenStreetMap, Wikidata, NASA GIBS). Hypothetical scenarios — not an operational emergency-warning system.</p>
     </div>
   </section>
 
@@ -42,7 +42,7 @@
         <div><div class="brand-t">FLOODSIM</div><div class="brand-s">HADR</div></div>
       </div>
       <nav id="nav"></nav>
-      <div class="sidebar-foot">Prototype · v0.9 MVP<br/>Decision-support demo</div>
+      <div class="sidebar-foot">FloodSim HADR v1.0<br/>SIH26161 · decision-support prototype</div>
     </aside>
     <div class="main">
       <header class="topbar">
@@ -56,7 +56,7 @@
           <button class="btn btn-sm btn-ghost" id="resetBtn" data-i18n="resetDemo">Reset Demo</button>
         </div>
       </header>
-      <div class="demo-strip">SIMULATED DEMO DATA — values are produced by a browser-side parametric surrogate for demonstration. No SPH / Delft3D / Google Earth Engine backend is connected. Validate with authoritative hydrological and field data before operational use.</div>
+      <div class="demo-strip" id="demoStrip"></div>
       <main id="view" class="view"></main>
     </div>
   </div>
@@ -66,10 +66,11 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/data.js"></script>
-  <script src="js/engine.js"></script>
+  <script src="js/analysis.js"></script>
+  <script src="js/geoexport.js"></script>
+  <script src="js/demo.js"></script>
   <script src="js/export.js"></script>
   <script src="js/map.js"></script>
   <script src="js/views.js"></script>

@@ -271,3 +271,4 @@ input[type=range] { width: 100%; accent-color: var(--cyan); }
   .landing h1 { font-size: 42px; }
   .tb-status { display: none; }
 }
+.px-img { image-rendering: pixelated; }
